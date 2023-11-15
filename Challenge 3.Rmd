@@ -15,16 +15,17 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+First let me create a little example that I have a question about. I want to know how I change the color of the geom_points in my ggplot. 
+
+```{r REPREX}
+library(reprex)
+library(tidyverse)
+library(ggplot2)
+
+ggplot(cars, aes(speed, dist)) +
+  geom_point()
 ```
 
-## Including Plots
+So this is the code I have a question about it. My next step is to select it all and copy it into my clipboard.
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Then I go to my Console and type: reprex()
